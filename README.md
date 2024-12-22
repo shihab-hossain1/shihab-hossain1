@@ -4,7 +4,8 @@
 
 ---
 
-![Typing SVG](https://readme-typing-svg.herokuapp.com?font=Courier&color=%2336BCF7&size=25&center=true&vCenter=true&lines=Welcome+to+my+profile;I+am+Shihab+Hossain;Computer+Science;)
+![Typing SVG](https://readme-typing-svg.herokuapp.com?font=Courier&color=%23FFFFFF&size=25&center=true&vCenter=true&lines=Welcome+to+my+profile;I+am+Shihab+Hossain;Computer+Science;)
+
 
 ---
 
