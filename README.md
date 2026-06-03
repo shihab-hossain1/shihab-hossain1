@@ -17,7 +17,7 @@
 - 🎓 Final-year **Computer Science and Engineering** student at *Port City International University* (CGPA 3.88).  
 - 💻 **Python Developer & Competitive Programmer** with strong fundamentals in C, C++, Java.  
 - 🤖 Passionate about **Artificial Intelligence, Machine Learning, NLP, and Computer Vision**.  
-- 🛠 Skilled in **Python, Django, MySQL, Docker, Git/GitHub, Arduino & IoT projects**.  
+- 🛠 Skilled in **Python, Django, MySQL, Git/GitHub, Arduino & IoT projects**.  
 - 🎯 Goal: To grow as an **AI Engineer** and contribute to impactful software solutions.  
 - 🌐 Active member of PCIU Computer Club, with experience in teaching peers and contributing to workshops.  
 
