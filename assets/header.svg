@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="300" viewBox="0 0 1200 300">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#2b3036"/>
+      <stop offset="0.45" stop-color="#3d5a63"/>
+      <stop offset="1" stop-color="#7cf5c4">
+        <animate attributeName="stop-color" values="#7cf5c4;#38e1d6;#7cf5c4" dur="8s" repeatCount="indefinite"/>
+      </stop>
+    </linearGradient>
+    <linearGradient id="wave" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#0d1117" stop-opacity="0.55"/>
+      <stop offset="1" stop-color="#0d1117" stop-opacity="0.15"/>
+    </linearGradient>
+    <pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse">
+      <path d="M32 0H0V32" fill="none" stroke="#ffffff" stroke-opacity="0.05"/>
+    </pattern>
+    <clipPath id="r"><rect width="1200" height="300" rx="18"/></clipPath>
+  </defs>
+  <style>
+    .t{font-family:'Segoe UI',Ubuntu,'Helvetica Neue',Arial,sans-serif;fill:#fff}
+    .name{font-size:64px;font-weight:800;letter-spacing:1px}
+    .sub{font-size:20px;font-weight:600;fill:#e6fff6;letter-spacing:.5px}
+    .w1{animation:drift 9s ease-in-out infinite alternate}
+    .w2{animation:drift 12s ease-in-out infinite alternate-reverse}
+    @keyframes drift{from{transform:translateX(0)}to{transform:translateX(-80px)}}
+    .fade{animation:in 1.2s ease-out both}
+    .fade2{animation:in 1.2s .4s ease-out both}
+    @keyframes in{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+  </style>
+  <g clip-path="url(#r)">
+    <rect width="1200" height="300" fill="url(#bg)"/>
+    <rect width="1200" height="300" fill="url(#grid)"/>
+    <g class="w1"><path d="M0 230 C 200 190, 380 270, 620 225 S 1050 190, 1300 235 V300 H0Z" fill="url(#wave)"/></g>
+    <g class="w2"><path d="M0 255 C 240 230, 420 290, 700 255 S 1100 235, 1300 262 V300 H0Z" fill="#0d1117" fill-opacity="0.35"/></g>
+    <text class="t name fade" x="600" y="132" text-anchor="middle">Shihab Hossain</text>
+    <text class="t sub fade2" x="600" y="180" text-anchor="middle">AI / ML Engineer in the Making  |  Python &amp; Django Developer  |  Competitive Programmer</text>
+  </g>
+</svg>

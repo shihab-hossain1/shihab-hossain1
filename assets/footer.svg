@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="130" viewBox="0 0 1200 130">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#2b3036"/><stop offset="0.5" stop-color="#3d5a63"/>
+      <stop offset="1" stop-color="#7cf5c4"><animate attributeName="stop-color" values="#7cf5c4;#38e1d6;#7cf5c4" dur="8s" repeatCount="indefinite"/></stop>
+    </linearGradient>
+    <clipPath id="r"><rect width="1200" height="130" rx="14"/></clipPath>
+  </defs>
+  <style>
+    .w{animation:d 10s ease-in-out infinite alternate}@keyframes d{to{transform:translateX(-80px)}}
+    .q{font-family:'JetBrains Mono',Consolas,'DejaVu Sans Mono',monospace;font-size:20px;font-weight:700;fill:#eafff7}
+  </style>
+  <g clip-path="url(#r)">
+    <rect width="1200" height="130" fill="url(#bg)"/>
+    <g class="w"><path d="M0 30 C 220 0, 420 60, 680 26 S 1080 0, 1300 32 V0 H0Z" fill="#0d1117" fill-opacity=".45"/></g>
+    <text x="600" y="84" class="q" text-anchor="middle">"First, solve the problem. Then, write the code."</text>
+  </g>
+</svg>

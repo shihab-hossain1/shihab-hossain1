@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="340" viewBox="0 0 600 340">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#140f22"/><stop offset="1" stop-color="#05080c"/></linearGradient>
+    <pattern id="dots" width="18" height="18" patternUnits="userSpaceOnUse"><circle cx="1" cy="1" r="1" fill="#c792ea" fill-opacity=".12"/></pattern>
+  </defs>
+  <style>
+    .m{font-family:'JetBrains Mono',Consolas,'DejaVu Sans Mono',monospace}
+    .flow{stroke-dasharray:6 6;animation:f 1.2s linear infinite}@keyframes f{to{stroke-dashoffset:-12}}
+    .h{font-weight:700;font-size:11px}
+    .k{fill:#ffd866}.f{fill:#c9d1d9}.t{fill:#5b6b7a}
+  </style>
+  <rect width="600" height="340" rx="14" fill="url(#bg)" stroke="#4b3a6f"/>
+  <rect width="600" height="340" rx="14" fill="url(#dots)"/>
+  <!-- relations -->
+  <g fill="none" stroke="#c792ea" stroke-width="1.6" class="flow">
+    <path d="M190 100 H250"/><path d="M350 100 H410"/><path d="M300 152 V200"/><path d="M115 152 V200"/>
+  </g>
+  <!-- tables -->
+  <g class="m" font-size="10">
+    <g transform="translate(40 40)"><rect width="150" height="112" rx="8" fill="#0d0b16" stroke="#c792ea" stroke-opacity=".7"/><rect width="150" height="24" rx="8" fill="#2a1f40"/><text x="12" y="16" class="h" fill="#e6edf3">PATIENT</text>
+      <text x="12" y="44" class="k">PK patient_id</text><text x="12" y="62" class="f">name</text><text x="12" y="80" class="f">dob · blood_group</text><text x="12" y="98" class="f">phone</text></g>
+    <g transform="translate(250 40)"><rect width="100" height="112" rx="8" fill="#0d0b16" stroke="#22d3ee" stroke-opacity=".7"/><rect width="100" height="24" rx="8" fill="#0f2230"/><text x="12" y="16" class="h" fill="#e6edf3">VISIT</text>
+      <text x="12" y="44" class="k">PK visit_id</text><text x="12" y="62" class="t">patient_id</text><text x="12" y="80" class="t">doctor_id</text><text x="12" y="98" class="f">visit_date</text></g>
+    <g transform="translate(410 40)"><rect width="150" height="112" rx="8" fill="#0d0b16" stroke="#c792ea" stroke-opacity=".7"/><rect width="150" height="24" rx="8" fill="#2a1f40"/><text x="12" y="16" class="h" fill="#e6edf3">DOCTOR</text>
+      <text x="12" y="44" class="k">PK doctor_id</text><text x="12" y="62" class="f">name</text><text x="12" y="80" class="f">specialization</text><text x="12" y="98" class="f">department_id</text></g>
+    <g transform="translate(250 200)"><rect width="150" height="94" rx="8" fill="#0d0b16" stroke="#00ff9c" stroke-opacity=".7"/><rect width="150" height="24" rx="8" fill="#0f2a20"/><text x="12" y="16" class="h" fill="#e6edf3">PRESCRIPTION</text>
+      <text x="12" y="44" class="k">PK rx_id</text><text x="12" y="62" class="t">visit_id</text><text x="12" y="80" class="f">medicine · dosage</text></g>
+    <g transform="translate(40 200)"><rect width="150" height="94" rx="8" fill="#0d0b16" stroke="#00ff9c" stroke-opacity=".7"/><rect width="150" height="24" rx="8" fill="#0f2a20"/><text x="12" y="16" class="h" fill="#e6edf3">MEDICAL_RECORD</text>
+      <text x="12" y="44" class="k">PK record_id</text><text x="12" y="62" class="t">patient_id</text><text x="12" y="80" class="f">diagnosis · report</text></g>
+  </g>
+  <g class="m" font-size="10">
+    <rect x="416" y="200" width="168" height="94" rx="8" fill="#0b0f14" stroke="#1b2a33"/>
+    <text x="432" y="222" fill="#c792ea">SELECT</text><text x="444" y="238" fill="#c9d1d9">p.name, r.diagnosis</text>
+    <text x="432" y="254" fill="#c792ea">FROM</text><text x="470" y="254" fill="#c9d1d9">patient p</text>
+    <text x="432" y="270" fill="#c792ea">JOIN</text><text x="470" y="270" fill="#c9d1d9">medical_record r</text>
+    <text x="432" y="286" fill="#00ff9c">✔ 0.004s</text>
+  </g>
+</svg>
