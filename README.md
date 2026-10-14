@@ -39,6 +39,9 @@
 ---
 
 <!-- ═══════════════════════════  PROJECTS  ═══════════════════════════ -->
+<p align="center">
+  <img src="./assets/profile-live.svg" width="100%" alt="Shihab Hossain live profile"/>
+</p>
 ## 🚀 Featured Projects
 
 <table>
