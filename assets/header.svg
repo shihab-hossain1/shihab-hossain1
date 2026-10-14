@@ -62,7 +62,7 @@
       <text x="72" y="210" class="tag fade3">Manual testing · Test design · Test automation</text>
       <g class="fade4">
         <rect x="72" y="230" width="78" height="26" rx="13" fill="#3776ab" fill-opacity=".15" stroke="#3776ab"/>
-        <text x="111" y="247" class="chip" text-anchor="middle">Python</text>
+        <text x="111" y="247" class="chip" text-anchor="middle">JavaScript</text>
         <rect x="158" y="230" width="72" height="26" rx="13" fill="#22d3ee" fill-opacity=".12" stroke="#22d3ee"/>
         <text x="194" y="247" class="chip" text-anchor="middle">pytest</text>
         <rect x="238" y="230" width="86" height="26" rx="13" fill="#43b02a" fill-opacity=".15" stroke="#43b02a"/>
