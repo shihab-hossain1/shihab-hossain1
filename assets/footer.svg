@@ -1,18 +1,55 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="130" viewBox="0 0 1200 130">
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="140" viewBox="0 0 1200 140">
   <defs>
-    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0" stop-color="#2b3036"/><stop offset="0.5" stop-color="#3d5a63"/>
-      <stop offset="1" stop-color="#7cf5c4"><animate attributeName="stop-color" values="#7cf5c4;#38e1d6;#7cf5c4" dur="8s" repeatCount="indefinite"/></stop>
+    <radialGradient id="glow" cx="50%" cy="120%" r="60%">
+      <stop offset="0" stop-color="#00ff9c" stop-opacity="0.14"/><stop offset="1" stop-color="#00ff9c" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="line" x1="0" x2="1">
+      <stop offset="0" stop-color="#00ff9c" stop-opacity="0"/><stop offset="0.5" stop-color="#22d3ee"/><stop offset="1" stop-color="#00ff9c" stop-opacity="0"/>
     </linearGradient>
-    <clipPath id="r"><rect width="1200" height="130" rx="14"/></clipPath>
+    <linearGradient id="txt" x1="0" x2="1">
+      <stop offset="0" stop-color="#00ff9c"/><stop offset="1" stop-color="#22d3ee"/>
+    </linearGradient>
+    <linearGradient id="sweep" x1="0" x2="1">
+      <stop offset="0" stop-color="#22d3ee" stop-opacity="0"/><stop offset="0.5" stop-color="#22d3ee" stop-opacity="0.18"/><stop offset="1" stop-color="#22d3ee" stop-opacity="0"/>
+    </linearGradient>
+    <pattern id="grid" width="28" height="28" patternUnits="userSpaceOnUse">
+      <path d="M28 0H0V28" fill="none" stroke="#ffffff" stroke-opacity="0.035"/>
+    </pattern>
+    <clipPath id="r"><rect width="1200" height="140" rx="16"/></clipPath>
   </defs>
   <style>
-    .w{animation:d 10s ease-in-out infinite alternate}@keyframes d{to{transform:translateX(-80px)}}
-    .q{font-family:'JetBrains Mono',Consolas,'DejaVu Sans Mono',monospace;font-size:20px;font-weight:700;fill:#eafff7}
+    .mono{font-family:'JetBrains Mono',Consolas,'SF Mono',Menlo,monospace}
+    .q{font-size:22px;font-weight:700;fill:url(#txt);letter-spacing:.5px}
+    .s{font-size:13px;fill:#5b6b7a;letter-spacing:2px}
+    .ok{font-size:13px;fill:#00ff9c;font-weight:700;letter-spacing:2px}
+    .sweep{animation:sweep 6s ease-in-out infinite}
+    @keyframes sweep{0%{transform:translateX(-300px)}100%{transform:translateX(1200px)}}
+    .lineA{animation:grow 3s ease-in-out infinite alternate}
+    @keyframes grow{from{opacity:.35}to{opacity:1}}
+    .cursor{animation:blink 1s steps(1) infinite}
+    @keyframes blink{50%{opacity:0}}
+    .pulse{animation:pulse 2s ease-in-out infinite}
+    @keyframes pulse{0%,100%{opacity:1}50%{opacity:.3}}
+    .fade{animation:in 1.2s ease-out both}
+    @keyframes in{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
   </style>
   <g clip-path="url(#r)">
-    <rect width="1200" height="130" fill="url(#bg)"/>
-    <g class="w"><path d="M0 30 C 220 0, 420 60, 680 26 S 1080 0, 1300 32 V0 H0Z" fill="#0d1117" fill-opacity=".45"/></g>
-    <text x="600" y="84" class="q" text-anchor="middle">"First, solve the problem. Then, write the code."</text>
+    <rect width="1200" height="140" fill="#0d1117"/>
+    <rect width="1200" height="140" fill="url(#grid)"/>
+    <rect width="1200" height="140" fill="url(#glow)"/>
+    <rect x="0" y="0" width="300" height="140" fill="url(#sweep)" class="sweep"/>
+    <rect x="150" y="22" width="900" height="1.5" fill="url(#line)" class="lineA"/>
+    <rect x="0.5" y="0.5" width="1199" height="139" rx="16" fill="none" stroke="#1f2a33"/>
+
+    <g class="mono fade">
+      <text x="600" y="72" class="q" text-anchor="middle">"Find the bugs before users do."</text>
+      <rect x="802" y="56" width="10" height="20" fill="#22d3ee" class="cursor"/>
+    </g>
+
+    <g class="mono">
+      <circle cx="474" cy="106" r="4" fill="#00ff9c" class="pulse"/>
+      <text x="486" y="111" class="ok">ALL CHECKS PASSED</text>
+      <text x="672" y="111" class="s">· THANKS FOR VISITING</text>
+    </g>
   </g>
 </svg>
