@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 200" width="960" height="200">
+  <defs>
+    <linearGradient id="line" x1="0" x2="1"><stop offset="0" stop-color="#00ff9c"/><stop offset="1" stop-color="#22d3ee"/></linearGradient>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#22d3ee"/></marker>
+  </defs>
+  <rect x="0" y="0" width="960" height="200" rx="16" fill="#0d1117"/>
+  <g font-family="JetBrains Mono, Consolas, monospace" text-anchor="middle">
+    <g>
+      <rect x="20" y="50" width="160" height="96" rx="12" fill="#0f1a17" stroke="#00ff9c" stroke-width="1.5"/>
+      <text x="100" y="86" fill="#00ff9c" font-size="15" font-weight="700">01 · ANALYSE</text>
+      <text x="100" y="110" fill="#c9d1d9" font-size="12">requirements</text>
+      <text x="100" y="128" fill="#5b6b7a" font-size="11">risks · edge cases</text>
+    </g>
+    <g>
+      <rect x="208" y="50" width="160" height="96" rx="12" fill="#0f1a17" stroke="#22d3ee" stroke-width="1.5"/>
+      <text x="288" y="86" fill="#22d3ee" font-size="15" font-weight="700">02 · DESIGN</text>
+      <text x="288" y="110" fill="#c9d1d9" font-size="12">test cases</text>
+      <text x="288" y="128" fill="#5b6b7a" font-size="11">BVA · partitioning</text>
+    </g>
+    <g>
+      <rect x="396" y="50" width="160" height="96" rx="12" fill="#0f1a17" stroke="#c792ea" stroke-width="1.5"/>
+      <text x="476" y="86" fill="#c792ea" font-size="15" font-weight="700">03 · EXECUTE</text>
+      <text x="476" y="110" fill="#c9d1d9" font-size="12">manual + automated</text>
+      <text x="476" y="128" fill="#5b6b7a" font-size="11">pytest · Playwright</text>
+    </g>
+    <g>
+      <rect x="584" y="50" width="160" height="96" rx="12" fill="#0f1a17" stroke="#ff4d6d" stroke-width="1.5"/>
+      <text x="664" y="86" fill="#ff4d6d" font-size="15" font-weight="700">04 · REPORT</text>
+      <text x="664" y="110" fill="#c9d1d9" font-size="12">clear bug reports</text>
+      <text x="664" y="128" fill="#5b6b7a" font-size="11">steps · expected · actual</text>
+    </g>
+    <g>
+      <rect x="772" y="50" width="168" height="96" rx="12" fill="#0f1a17" stroke="#ffb020" stroke-width="1.5"/>
+      <text x="856" y="86" fill="#ffb020" font-size="15" font-weight="700">05 · REGRESS</text>
+      <text x="856" y="110" fill="#c9d1d9" font-size="12">re-test on every push</text>
+      <text x="856" y="128" fill="#5b6b7a" font-size="11">GitHub Actions CI</text>
+    </g>
+  </g>
+  <g stroke="#22d3ee" stroke-width="2" marker-end="url(#arrow)">
+    <line x1="182" y1="98" x2="204" y2="98"/><line x1="370" y1="98" x2="392" y2="98"/>
+    <line x1="558" y1="98" x2="580" y2="98"/><line x1="746" y1="98" x2="768" y2="98"/>
+  </g>
+  <path d="M856 150 Q856 182 480 182 Q100 182 100 150" fill="none" stroke="url(#line)" stroke-width="1.5" stroke-dasharray="5 5" marker-end="url(#arrow)"/>
+  <text x="480" y="167" fill="#5b6b7a" font-family="JetBrains Mono, Consolas, monospace" font-size="11" text-anchor="middle">feedback loop</text>
+  <text x="480" y="32" fill="#e6edf3" font-family="JetBrains Mono, Consolas, monospace" font-size="14" text-anchor="middle">find the bugs before users do</text>
+</svg>
