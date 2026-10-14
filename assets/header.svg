@@ -1,38 +1,106 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="300" viewBox="0 0 1200 300">
   <defs>
-    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0" stop-color="#2b3036"/>
-      <stop offset="0.45" stop-color="#3d5a63"/>
-      <stop offset="1" stop-color="#7cf5c4">
-        <animate attributeName="stop-color" values="#7cf5c4;#38e1d6;#7cf5c4" dur="8s" repeatCount="indefinite"/>
-      </stop>
+    <radialGradient id="glowL" cx="18%" cy="30%" r="55%">
+      <stop offset="0" stop-color="#22d3ee" stop-opacity="0.16"/><stop offset="1" stop-color="#22d3ee" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="glowR" cx="85%" cy="85%" r="50%">
+      <stop offset="0" stop-color="#00ff9c" stop-opacity="0.12"/><stop offset="1" stop-color="#00ff9c" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="title" x1="0" x2="1">
+      <stop offset="0" stop-color="#00ff9c"/><stop offset="1" stop-color="#22d3ee"/>
     </linearGradient>
-    <linearGradient id="wave" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0" stop-color="#0d1117" stop-opacity="0.55"/>
-      <stop offset="1" stop-color="#0d1117" stop-opacity="0.15"/>
+    <linearGradient id="scan" x1="0" x2="1">
+      <stop offset="0" stop-color="#22d3ee" stop-opacity="0"/><stop offset="0.5" stop-color="#22d3ee" stop-opacity="0.35"/><stop offset="1" stop-color="#22d3ee" stop-opacity="0"/>
     </linearGradient>
-    <pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse">
-      <path d="M32 0H0V32" fill="none" stroke="#ffffff" stroke-opacity="0.05"/>
+    <linearGradient id="barg" x1="0" x2="1">
+      <stop offset="0" stop-color="#00ff9c"/><stop offset="1" stop-color="#22d3ee"/>
+    </linearGradient>
+    <pattern id="grid" width="28" height="28" patternUnits="userSpaceOnUse">
+      <path d="M28 0H0V28" fill="none" stroke="#ffffff" stroke-opacity="0.035"/>
     </pattern>
     <clipPath id="r"><rect width="1200" height="300" rx="18"/></clipPath>
+    <clipPath id="term"><rect x="670" y="40" width="470" height="220" rx="12"/></clipPath>
   </defs>
   <style>
-    .t{font-family:'Segoe UI',Ubuntu,'Helvetica Neue',Arial,sans-serif;fill:#fff}
-    .name{font-size:64px;font-weight:800;letter-spacing:1px}
-    .sub{font-size:20px;font-weight:600;fill:#e6fff6;letter-spacing:.5px}
-    .w1{animation:drift 9s ease-in-out infinite alternate}
-    .w2{animation:drift 12s ease-in-out infinite alternate-reverse}
-    @keyframes drift{from{transform:translateX(0)}to{transform:translateX(-80px)}}
-    .fade{animation:in 1.2s ease-out both}
-    .fade2{animation:in 1.2s .4s ease-out both}
-    @keyframes in{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+    .sans{font-family:'Segoe UI',Inter,Ubuntu,'Helvetica Neue',Arial,sans-serif}
+    .mono{font-family:'JetBrains Mono',Consolas,'SF Mono',Menlo,monospace;font-size:13px}
+    .name{font-size:58px;font-weight:800;fill:#f0f6fc;letter-spacing:.5px}
+    .role{font-size:22px;font-weight:700;fill:url(#title);letter-spacing:.6px}
+    .tag{font-size:15px;fill:#8b98a5}
+    .chip{font-size:12.5px;font-weight:600;fill:#c9d1d9}
+    .dim{fill:#4b5866} .txt{fill:#c9d1d9} .ok{fill:#00ff9c;font-weight:700}
+    .ln,.ok,.sum{animation-duration:9s;animation-iteration-count:infinite;animation-timing-function:ease-out;animation-fill-mode:both}
+    .sum{animation-name:sum}
+    .bar{animation:bar 9s ease-in-out infinite both}
+    .fade1{animation:in 1s ease-out both} .fade2{animation:in 1s .25s ease-out both}
+    .fade3{animation:in 1s .5s ease-out both} .fade4{animation:in 1s .75s ease-out both}
+    @keyframes in{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+    .scan{animation:scan 4.5s ease-in-out infinite}
+    @keyframes scan{0%{transform:translateY(0)}50%{transform:translateY(205px)}100%{transform:translateY(0)}}
+    .cursor{animation:blink 1s steps(1) infinite}
+    @keyframes blink{50%{opacity:0}}
+    .pulse{animation:pulse 2s ease-in-out infinite}
+    @keyframes pulse{0%,100%{opacity:1}50%{opacity:.35}}
+    @keyframes l0{0%,10.0%{opacity:0;transform:translateX(-6px)}12.8%,88%{opacity:1;transform:none}96%,100%{opacity:0}}@keyframes r0{0%,15.0%{opacity:0}16.7%,88%{opacity:1}96%,100%{opacity:0}}@keyframes l1{0%,18.3%{opacity:0;transform:translateX(-6px)}21.1%,88%{opacity:1;transform:none}96%,100%{opacity:0}}@keyframes r1{0%,23.3%{opacity:0}25.0%,88%{opacity:1}96%,100%{opacity:0}}@keyframes l2{0%,26.7%{opacity:0;transform:translateX(-6px)}29.4%,88%{opacity:1;transform:none}96%,100%{opacity:0}}@keyframes r2{0%,31.7%{opacity:0}33.3%,88%{opacity:1}96%,100%{opacity:0}}@keyframes l3{0%,35.0%{opacity:0;transform:translateX(-6px)}37.8%,88%{opacity:1;transform:none}96%,100%{opacity:0}}@keyframes r3{0%,40.0%{opacity:0}41.7%,88%{opacity:1}96%,100%{opacity:0}}@keyframes l4{0%,43.3%{opacity:0;transform:translateX(-6px)}46.1%,88%{opacity:1;transform:none}96%,100%{opacity:0}}@keyframes r4{0%,48.3%{opacity:0}50.0%,88%{opacity:1}96%,100%{opacity:0}}@keyframes l5{0%,51.7%{opacity:0;transform:translateX(-6px)}54.4%,88%{opacity:1;transform:none}96%,100%{opacity:0}}@keyframes r5{0%,56.7%{opacity:0}58.3%,88%{opacity:1}96%,100%{opacity:0}}@keyframes bar{0%,8%{width:0}60.0%,88%{width:410px}96%,100%{width:0}}@keyframes sum{0%,60.0%{opacity:0}63.0%,88%{opacity:1}96%,100%{opacity:0}}
   </style>
+
   <g clip-path="url(#r)">
-    <rect width="1200" height="300" fill="url(#bg)"/>
+    <rect width="1200" height="300" fill="#0d1117"/>
     <rect width="1200" height="300" fill="url(#grid)"/>
-    <g class="w1"><path d="M0 230 C 200 190, 380 270, 620 225 S 1050 190, 1300 235 V300 H0Z" fill="url(#wave)"/></g>
-    <g class="w2"><path d="M0 255 C 240 230, 420 290, 700 255 S 1100 235, 1300 262 V300 H0Z" fill="#0d1117" fill-opacity="0.35"/></g>
-    <text class="t name fade" x="600" y="132" text-anchor="middle">Shihab Hossain</text>
-    <text class="t sub fade2" x="600" y="180" text-anchor="middle">AI / ML Engineer in the Making  |  Python &amp; Django Developer  |  Competitive Programmer</text>
+    <rect width="1200" height="300" fill="url(#glowL)"/>
+    <rect width="1200" height="300" fill="url(#glowR)"/>
+    <rect x="0.5" y="0.5" width="1199" height="299" rx="18" fill="none" stroke="#1f2a33"/>
+
+    <!-- left: identity -->
+    <g class="sans">
+      <g class="fade1">
+        <circle cx="76" cy="78" r="5" fill="#00ff9c" class="pulse"/>
+        <text x="90" y="83" class="tag" style="font-size:13px;letter-spacing:2px;fill:#00ff9c;font-weight:700">OPEN TO SQA ROLES</text>
+      </g>
+      <text x="70" y="145" class="name fade2">Shihab Hossain</text>
+      <text x="72" y="182" class="role fade3">Aspiring SQA Engineer</text>
+      <text x="72" y="210" class="tag fade3">Manual testing · Test design · Test automation</text>
+      <g class="fade4">
+        <rect x="72" y="230" width="78" height="26" rx="13" fill="#3776ab" fill-opacity=".15" stroke="#3776ab"/>
+        <text x="111" y="247" class="chip" text-anchor="middle">Python</text>
+        <rect x="158" y="230" width="72" height="26" rx="13" fill="#22d3ee" fill-opacity=".12" stroke="#22d3ee"/>
+        <text x="194" y="247" class="chip" text-anchor="middle">pytest</text>
+        <rect x="238" y="230" width="86" height="26" rx="13" fill="#43b02a" fill-opacity=".15" stroke="#43b02a"/>
+        <text x="281" y="247" class="chip" text-anchor="middle">Selenium</text>
+        <rect x="332" y="230" width="96" height="26" rx="13" fill="#2ead33" fill-opacity=".15" stroke="#2ead33"/>
+        <text x="380" y="247" class="chip" text-anchor="middle">Playwright</text>
+        <rect x="436" y="230" width="62" height="26" rx="13" fill="#c792ea" fill-opacity=".12" stroke="#c792ea"/>
+        <text x="467" y="247" class="chip" text-anchor="middle">CI/CD</text>
+      </g>
+    </g>
+
+    <!-- right: live test runner -->
+    <g>
+      <rect x="670" y="40" width="470" height="220" rx="12" fill="#0a0e14" stroke="#1f2a33"/>
+      <rect x="670" y="40" width="470" height="34" rx="12" fill="#111820"/>
+      <rect x="670" y="62" width="470" height="12" fill="#111820"/>
+      <circle cx="690" cy="57" r="5" fill="#ff5f56"/><circle cx="706" cy="57" r="5" fill="#ffbd2e"/><circle cx="722" cy="57" r="5" fill="#27c93f"/>
+      <text x="905" y="61" class="mono dim" text-anchor="middle">qa@shihab: ~/sqa-automation-framework</text>
+      <text x="696" y="94" class="mono" style="fill:#22d3ee">$</text>
+      <text x="712" y="94" class="mono txt">pytest -m smoke</text>
+      <rect x="828" y="83" width="8" height="14" fill="#22d3ee" class="cursor"/>
+      <g class="ln" style="animation-name:l0"><text class="mono dim" x="696" y="112">›</text><text class="mono txt" x="712" y="112">test_login_valid_user</text></g>
+      <text class="mono ok" x="1110" y="112" text-anchor="end" style="animation-name:r0">PASSED</text>
+      <g class="ln" style="animation-name:l1"><text class="mono dim" x="696" y="136">›</text><text class="mono txt" x="712" y="136">test_login_locked_out_user</text></g>
+      <text class="mono ok" x="1110" y="136" text-anchor="end" style="animation-name:r1">PASSED</text>
+      <g class="ln" style="animation-name:l2"><text class="mono dim" x="696" y="160">›</text><text class="mono txt" x="712" y="160">test_login_empty_fields</text></g>
+      <text class="mono ok" x="1110" y="160" text-anchor="end" style="animation-name:r2">PASSED</text>
+      <g class="ln" style="animation-name:l3"><text class="mono dim" x="696" y="184">›</text><text class="mono txt" x="712" y="184">test_cart_add_remove</text></g>
+      <text class="mono ok" x="1110" y="184" text-anchor="end" style="animation-name:r3">PASSED</text>
+      <g class="ln" style="animation-name:l4"><text class="mono dim" x="696" y="208">›</text><text class="mono txt" x="712" y="208">test_checkout_happy_path</text></g>
+      <text class="mono ok" x="1110" y="208" text-anchor="end" style="animation-name:r4">PASSED</text>
+      <g class="ln" style="animation-name:l5"><text class="mono dim" x="696" y="232">›</text><text class="mono txt" x="712" y="232">test_checkout_required_fields</text></g>
+      <text class="mono ok" x="1110" y="232" text-anchor="end" style="animation-name:r5">PASSED</text>
+      <rect x="696" y="250" width="410" height="4" rx="2" fill="#1a232c"/>
+      <rect x="696" y="250" width="410" height="4" rx="2" fill="url(#barg)" class="bar"/>
+      <g clip-path="url(#term)">
+        <rect x="670" y="74" width="470" height="2" fill="url(#scan)" class="scan"/>
+      </g>
+    </g>
   </g>
 </svg>
