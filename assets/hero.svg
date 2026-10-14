@@ -19,8 +19,10 @@
     .dim{fill:#5b6b7a}.w{fill:#e6edf3}.g{fill:#00ff9c}.c{fill:#22d3ee}.p{fill:#c792ea}.y{fill:#ffd866}.o{fill:#ff9e64}
     .cur{animation:blink 1s steps(1) infinite}
     @keyframes blink{50%{opacity:0}}
-    .pulse{transform-origin:965px 215px;animation:pulse 3s ease-in-out infinite}
+    .pulse{transform-origin:995px 205px;animation:pulse 3s ease-in-out infinite}
     @keyframes pulse{50%{transform:scale(1.08);opacity:.75}}
+    .ring{transform-origin:995px 205px;animation:spin 14s linear infinite}
+    @keyframes spin{to{transform:rotate(360deg)}}
     .line{opacity:0;animation:show .01s forwards}
     @keyframes show{to{opacity:1}}
     .scan{animation:scan 4s linear infinite}
@@ -34,56 +36,58 @@
   <!-- top status bar -->
   <g class="m" font-size="12">
     <circle cx="28" cy="26" r="4" fill="#00ff9c" class="live"/>
-    <text x="40" y="30" class="g">SYSTEM ONLINE</text>
-    <text x="180" y="30" class="dim">NODE: CHATTOGRAM-BD</text>
-    <text x="400" y="30" class="dim">BRANCH: <tspan class="c">ai-engineer</tspan></text>
-    <text x="620" y="30" class="dim">CGPA: <tspan class="g">3.88</tspan></text>
-    <text x="780" y="30" class="dim">STATUS: <tspan class="g">OPEN TO OPPORTUNITIES</tspan></text>
+    <text x="40" y="30" class="g">ALL SYSTEMS TESTED</text>
+    <text x="210" y="30" class="dim">NODE: CHATTOGRAM-BD</text>
+    <text x="420" y="30" class="dim">BRANCH: <tspan class="c">sqa-engineer</tspan></text>
+    <text x="640" y="30" class="dim">CGPA: <tspan class="g">3.88</tspan></text>
+    <text x="790" y="30" class="dim">STATUS: <tspan class="g">OPEN TO SQA ROLES</tspan></text>
   </g>
   <line x1="20" y1="44" x2="1180" y2="44" stroke="#12251f"/>
 
   <!-- left: title -->
   <text x="40" y="92" class="s w" font-size="34" font-weight="800">Shihab Hossain</text>
-  <text x="40" y="118" class="m g" font-size="13" letter-spacing="2">PYTHON DEVELOPER // ASPIRING AI ENGINEER // CSE @ PCIU</text>
-  <text x="40" y="142" class="s dim" font-size="13">Building intelligent, data-driven systems with Python, Django and machine learning.</text>
+  <text x="40" y="118" class="m g" font-size="13" letter-spacing="2">ASPIRING SQA ENGINEER // TEST AUTOMATION // CSE @ PCIU</text>
+  <text x="40" y="142" class="s dim" font-size="13">Designing test cases, writing clear bug reports and automating regression checks with Python.</text>
 
   <!-- code window -->
   <rect x="40" y="160" width="760" height="232" rx="10" fill="#0b1118" stroke="#1b2a33"/>
   <circle cx="60" cy="178" r="5" fill="#ff5f57"/><circle cx="78" cy="178" r="5" fill="#febc2e"/><circle cx="96" cy="178" r="5" fill="#28c840"/>
-  <text x="120" y="182" class="m dim" font-size="11">~/profile/shihab.py — python 3</text>
+  <text x="120" y="182" class="m dim" font-size="11">~/profile/test_shihab.py — pytest</text>
   <text x="708" y="182" class="m c" font-size="11">[main ✓]</text>
-  <g class="m" font-size="13.5">
-    <text x="60" y="212" class="line" style="animation-delay:.2s"><tspan class="p">class</tspan> <tspan class="y">ShihabHossain</tspan><tspan class="w">(</tspan><tspan class="c">Engineer</tspan><tspan class="w">):</tspan></text>
-    <text x="84" y="234" class="line" style="animation-delay:.5s"><tspan class="w">role      = </tspan><tspan class="g">"Python Developer · Aspiring AI Engineer"</tspan></text>
+  <g class="m" font-size="13.5" xml:space="preserve">
+    <text x="60" y="212" class="line" style="animation-delay:.2s"><tspan class="p">class</tspan> <tspan class="y">ShihabHossain</tspan><tspan class="w">(</tspan><tspan class="c">QAEngineer</tspan><tspan class="w">):</tspan></text>
+    <text x="84" y="234" class="line" style="animation-delay:.5s"><tspan class="w">role      = </tspan><tspan class="g">"Aspiring SQA Engineer"</tspan></text>
     <text x="84" y="254" class="line" style="animation-delay:.8s"><tspan class="w">education = </tspan><tspan class="g">"B.Sc. in CSE, Port City Int'l University"</tspan></text>
-    <text x="84" y="274" class="line" style="animation-delay:1.1s"><tspan class="w">cgpa      = </tspan><tspan class="o">3.88</tspan></text>
-    <text x="84" y="294" class="line" style="animation-delay:1.4s"><tspan class="w">stack     = [</tspan><tspan class="g">"Python"</tspan><tspan class="w">, </tspan><tspan class="g">"Django"</tspan><tspan class="w">, </tspan><tspan class="g">"MySQL"</tspan><tspan class="w">, </tspan><tspan class="g">"C++"</tspan><tspan class="w">, </tspan><tspan class="g">"Java"</tspan><tspan class="w">]</tspan></text>
-    <text x="84" y="314" class="line" style="animation-delay:1.7s"><tspan class="w">focus     = [</tspan><tspan class="g">"ML"</tspan><tspan class="w">, </tspan><tspan class="g">"NLP"</tspan><tspan class="w">, </tspan><tspan class="g">"Computer Vision"</tspan><tspan class="w">, </tspan><tspan class="g">"IoT"</tspan><tspan class="w">]</tspan></text>
-    <text x="84" y="342" class="line" style="animation-delay:2.0s"><tspan class="p">def</tspan> <tspan class="c">mission</tspan><tspan class="w">(self):</tspan></text>
-    <text x="108" y="362" class="line" style="animation-delay:2.3s"><tspan class="p">return</tspan> <tspan class="g">"Build AI that solves real problems."</tspan></text>
+    <text x="84" y="274" class="line" style="animation-delay:1.1s"><tspan class="w">testing   = [</tspan><tspan class="g">"Manual"</tspan><tspan class="w">, </tspan><tspan class="g">"Test Design"</tspan><tspan class="w">, </tspan><tspan class="g">"Regression"</tspan><tspan class="w">, </tspan><tspan class="g">"API"</tspan><tspan class="w">]</tspan></text>
+    <text x="84" y="294" class="line" style="animation-delay:1.4s"><tspan class="w">tools     = [</tspan><tspan class="g">"pytest"</tspan><tspan class="w">, </tspan><tspan class="g">"Selenium"</tspan><tspan class="w">, </tspan><tspan class="g">"Playwright"</tspan><tspan class="w">, </tspan><tspan class="g">"Postman"</tspan><tspan class="w">, </tspan><tspan class="g">"Jira"</tspan><tspan class="w">]</tspan></text>
+    <text x="84" y="314" class="line" style="animation-delay:1.7s"><tspan class="w">methods   = [</tspan><tspan class="g">"BVA"</tspan><tspan class="w">, </tspan><tspan class="g">"Equivalence Partitioning"</tspan><tspan class="w">, </tspan><tspan class="g">"STLC"</tspan><tspan class="w">]</tspan></text>
+    <text x="84" y="342" class="line" style="animation-delay:2.0s"><tspan class="p">def</tspan> <tspan class="c">test_mission</tspan><tspan class="w">(self):</tspan></text>
+    <text x="108" y="362" class="line" style="animation-delay:2.3s"><tspan class="p">assert</tspan> <tspan class="w">self.finds_bugs_before_users </tspan><tspan class="p">is</tspan> <tspan class="o">True</tspan></text>
   </g>
 
   <!-- prompt -->
   <g class="m" font-size="13">
-    <text x="40" y="424" class="line" style="animation-delay:2.7s"><tspan class="g">shihab@pciu</tspan><tspan class="w">:</tspan><tspan class="c">~/profile</tspan><tspan class="w">$ python -m shihab --deploy</tspan></text>
-    <text x="40" y="446" class="line" style="animation-delay:3.2s"><tspan class="g">✔</tspan><tspan class="dim"> profile loaded · 0 errors · ready to collaborate</tspan><tspan class="g cur"> █</tspan></text>
+    <text x="40" y="424" class="line" style="animation-delay:2.7s"><tspan class="g">shihab@pciu</tspan><tspan class="w">:</tspan><tspan class="c">~/profile</tspan><tspan class="w">$ pytest test_shihab.py -v</tspan></text>
+    <text x="40" y="446" class="line" style="animation-delay:3.2s"><tspan class="g">✔</tspan><tspan class="w"> test_mission </tspan><tspan class="g">PASSED</tspan><tspan class="dim"> · ready to test your product</tspan><tspan class="g cur"> █</tspan></text>
   </g>
 
   <!-- right: identity card -->
   <rect x="830" y="60" width="330" height="390" rx="14" fill="#0a1410" stroke="#1f6f5c"/>
-  <text x="850" y="84" class="m g" font-size="11" letter-spacing="1.5">IDENTITY MATRIX</text>
+  <text x="850" y="84" class="m g" font-size="11" letter-spacing="1.5">QA CLEARANCE</text>
   <text x="1140" y="84" class="m dim" font-size="11" text-anchor="end">#PCIU-CSE</text>
-  <circle cx="965" cy="215" r="95" fill="url(#halo)" class="pulse"/>
-  <circle cx="965" cy="215" r="62" fill="url(#orb)"/>
-  <ellipse cx="945" cy="190" rx="22" ry="12" fill="#ffffff" fill-opacity="0.25"/>
+  <circle cx="995" cy="205" r="95" fill="url(#halo)" class="pulse"/>
+  <circle cx="995" cy="205" r="80" fill="none" stroke="#22d3ee" stroke-opacity=".45" stroke-width="1.5" stroke-dasharray="6 10" class="ring"/>
+  <circle cx="995" cy="205" r="62" fill="url(#orb)"/>
+  <ellipse cx="975" cy="180" rx="22" ry="12" fill="#ffffff" fill-opacity="0.25"/>
+  <path d="M968 207 L988 227 L1024 187" fill="none" stroke="#062a1d" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
   <text x="995" y="322" class="s w" font-size="20" font-weight="800" text-anchor="middle">SHIHAB HOSSAIN</text>
   <text x="995" y="342" class="m dim" font-size="11" text-anchor="middle">@shihab-hossain1 · Chattogram, BD</text>
   <rect x="850" y="362" width="140" height="30" rx="6" fill="#0f2a20" stroke="#00ff9c" stroke-opacity=".5"/>
   <text x="920" y="382" class="m g" font-size="12" text-anchor="middle">CGPA 3.88</text>
   <rect x="1000" y="362" width="140" height="30" rx="6" fill="#0c2230" stroke="#22d3ee" stroke-opacity=".5"/>
-  <text x="1070" y="382" class="m c" font-size="12" text-anchor="middle">FINAL-YEAR CSE</text>
+  <text x="1070" y="382" class="m c" font-size="12" text-anchor="middle">CSE @ PCIU</text>
   <rect x="850" y="402" width="290" height="30" rx="6" fill="#0f1a16" stroke="#1f6f5c"/>
-  <text x="995" y="422" class="m w" font-size="12" text-anchor="middle">AI · ML · NLP · CV · IoT</text>
+  <text x="995" y="422" class="m w" font-size="12" text-anchor="middle">MANUAL · AUTOMATION · API · CI</text>
 
   <rect x="1" y="0" width="1198" height="2" fill="#00ff9c" opacity=".12" class="scan"/>
 </svg>
