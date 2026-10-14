@@ -22,6 +22,9 @@
 <p align="center">
   <img src="./assets/hero.svg" width="100%" alt="Developer profile terminal"/>
 </p>
+<p align="center">
+  <img src="./assets/id-card.svg" width="100%" alt="Shihab Hossain SQA ID card"/>
+</p>
 
 ## 🧠 About Me
 
