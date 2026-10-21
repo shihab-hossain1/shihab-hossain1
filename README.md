@@ -51,7 +51,7 @@
       <h3 align="center">🧪 SQA Automation Framework</h3>
       <p align="center">UI test suite for a demo e-commerce site: login, cart, checkout and sorting, tested with both Playwright and Selenium using the Page Object Model, with CI on every push.</p>
       <p align="center"><code>Python</code> • <code>pytest</code> • <code>Playwright</code> • <code>Selenium</code> • <code>GitHub Actions</code></p>
-      <p align="center"><a href="https://github.com/shihab-hossain1/sqa-automation-framework"><img src="https://img.shields.io/badge/REPO-VIEW%20SOURCE-00ff9c?style=flat-square&logo=github&labelColor=0d1117" alt="Repo"/></a></p>
+      <p align="center"><a href="https://github.com/shihab-hossain1/sqa-automation-assessment"><img src="https://img.shields.io/badge/REPO-VIEW%20SOURCE-00ff9c?style=flat-square&logo=github&labelColor=0d1117" alt="Repo"/></a></p>
     </td>
     <td width="50%" valign="top">
       <img src="./assets/project-diagnocare.svg" width="100%" alt="DiagnoCare"/>
