@@ -58,7 +58,7 @@
       <h3 align="center">🩺 DiagnoCare</h3>
       <p align="center">Django diagnostic-test booking app I built, now my testing practice ground: test cases for the booking flow and role-based access, plus the bugs I find.</p>
       <p align="center"><code>Django</code> • <code>Python</code> • <code>MySQL</code> • <code>Test Cases</code></p>
-      <p align="center"><a href="https://github.com/shihab-hossain1/DiagnoCare"><img src="https://img.shields.io/badge/REPO-VIEW%20SOURCE-22d3ee?style=flat-square&logo=github&labelColor=0d1117" alt="Repo"/></a></p>
+      <p align="center"><a href="https://github.com/shihab-hossain1/DiagnoCare_2.0"><img src="https://img.shields.io/badge/REPO-VIEW%20SOURCE-22d3ee?style=flat-square&logo=github&labelColor=0d1117" alt="Repo"/></a></p>
     </td>
   </tr>
   <tr>
